@@ -5,3 +5,4 @@ Add fuctionality available, and it includes test cases
  1. returns 0 for an empty string
  2. returns same number if a single number given as input
  3. returns sum of numbers, input - multiple numbers seperated by comma
+ 4. return the sum even if numbers contain new line.
