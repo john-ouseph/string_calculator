@@ -7,7 +7,11 @@ class StringCalculator
       delimiter = ",|\n"
     end
 
-    numbers.split(/#{delimiter}/).map(&:to_i).reduce(:+)
+    values = numbers.split(/#{delimiter}/).map(&:to_i)
+    negatives_values = values.select { |n| n < 0 }
+    raise "negative numbers not allowed: #{negatives_values.join(', ')}" unless negatives_values.empty?
+
+    values.inject(:+)
   end
 end
   
